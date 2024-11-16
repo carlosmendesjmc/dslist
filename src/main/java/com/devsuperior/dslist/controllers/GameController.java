@@ -19,6 +19,7 @@ public class GameController {
     @Autowired  /*injetando Service no controller*/
     private GameService gameService;
 
+    /*Criando um metodo e retorna a busca por id*/
     @GetMapping(value = "/{id}")
     public GameDTO finbById(@PathVariable Long id){
         GameDTO result = gameService.findById(id);
